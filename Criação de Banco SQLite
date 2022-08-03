@@ -1,0 +1,31 @@
+import sqlite3
+from sqlite3 import Error
+
+### Função de criação/conexão do banco ###
+def conexao_banco():
+    caminho=""
+    con = None
+    try:
+        con=sqlite3.connect(caminho)
+    except Error as er:
+        print(er)
+    return con
+    
+### Função para criar tabelas ###
+def criarTable(conex,sql):
+    try:
+        cursorr=conex.cursor()
+        cursorr.execute(sql)
+        print('Tabela Criada com Sucesso')
+    except Error as er:
+        print(er)
+
+conn = conexao_banco() ## chama a função conexao branco e cria conexao com o banco/cria o banco caso não exista
+
+### Código SQL para criar tabela ### 
+sql_cod = """ """ 
+
+### Criação da tabela dentro do código banco SQLite ####
+criarTable(conn,sqll_cod)
+
+### Dentro do código SQL é feito todo o relacionamento das tabelas, sendo assim definido os schemas que você vai utilizar para sua realidade ####
