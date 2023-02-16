@@ -1,15 +1,11 @@
 with list_schemas as (
     select table_schema||'.'||table_name as t_name from snowflake.account_usage.tables
-    where TABLE_CATALOG = 'FAVODATA' 
     union 
     select table_schema||'"."'||table_name as t_name from snowflake.account_usage.tables
-    where TABLE_CATALOG = 'FAVODATA' 
     union
-    select table_schema||'.'||table_name as t_name from snowflake.account_usage.views
-    where TABLE_CATALOG = 'FAVODATA' 
+    select table_schema||'.'||table_name as t_name from snowflake.account_usage.views 
     union 
     select table_schema||'"."'||table_name as t_name from snowflake.account_usage.views
-    where TABLE_CATALOG = 'FAVODATA' 
 ),
 query_history_filtred as (
     SELECT
