@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @CarlosCaastro
 - 👀 I’m interested in data in generally
-- 🌱 I’m currently learning machine learning
 - 💞️ I’m looking to collaborate on machine learning and analytics engineer 
 - 📫 How to reach me carlos.candradr@gmail.com
 
